@@ -24,7 +24,6 @@ public class RegisterTest {
         driver.findElement(By.cssSelector("div.account-cart-wrapper span.label")).click();
         driver.findElement(By.cssSelector("div.links li:nth-child(5) a")).click();
         driver.findElement(By.id("firstname")).sendKeys("Ana");
-
         driver.findElement(By.id("lastname")).sendKeys("Pop");
         driver.findElement(By.id("email_address")).sendKeys("ana@yahoo.com");
         driver.findElement(By.id("password")).sendKeys("AnaAna1");
