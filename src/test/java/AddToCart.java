@@ -2,6 +2,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,8 +27,11 @@ public class AddToCart {
         driver.findElement(cssSelector(".swatch-label img")).click();
         driver.findElement(cssSelector("#configurable_swatch_size span")).click();
         driver.findElement(cssSelector(".add-to-cart-buttons span span")).click();
+
         WebElement recentlyAddedItem = driver.findElement(cssSelector(".header-minicart .count"));
         Assert.assertTrue(recentlyAddedItem.isDisplayed());
+        WebElement editCart=driver.findElement(By.cssSelector(".product-cart-actions li a"));
+        Assert.assertTrue(editCart.isDisplayed());
 
     }
     @After
